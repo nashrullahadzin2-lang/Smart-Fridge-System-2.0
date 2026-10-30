@@ -1,0 +1,39 @@
+# Smart Fridge Expiry Tracker
+
+A beginner-friendly Python console app for keeping a manual inventory of food. It stores each item, quantity, wet/dry type, label date, and the date printed on the package. It sorts items by their date so the soonest one is easy to see.
+
+## Run it
+
+1. Install Python 3 if it is not already installed.
+2. Open a terminal in this folder.
+3. Run: python smart_fridge.py
+
+The program creates fridge_data.json beside the Python file and saves the inventory there between sessions. It uses only Python's standard library.
+
+## What it does
+
+- Add food using its name, wet/dry type, quantity, label type, and printed date.
+- View food with the soonest date first.
+- See a reminder for items due soon or past their label date.
+- Mark portions or packs as used.
+- Remove an item from the tracker.
+
+Enter dates in YYYY-MM-DD format, such as 2026-12-31. Use the date and storage instructions printed on the food package.
+
+## Safety and scope
+
+This is a console tracker, not a sensor connected to a fridge. It does not test food, monitor temperature, or calculate a scientifically measured "chemical stability" percentage. The sample output did not define how that percentage or its fixed shelf-life estimates were measured, so this starter uses a date entered from the package instead.
+
+Expiry/use-by dates and best-before dates are shown separately. The program flags a past expiry/use-by date with a do-not-use reminder. A past best-before date gets a separate quality reminder; the app cannot determine food safety. Always follow the package instructions and local food-safety guidance.
+
+For Malaysian consumer guidance, see the Ministry of Health's [Food Safety and Quality Division FAQ](https://hq.moh.gov.my/fsq/xs/faq.php) and its [Malaysian Dietary Guidelines for Children and Adolescents](https://hq.moh.gov.my/nutrition/wp-content/uploads/2024/10/01.Buku-MDGCA-web_26.08.2024.pdf).
+
+## Python concepts in this project
+
+- Variables and types: names, quantities, dates, and menu choices.
+- Input and output: prompts and status messages.
+- Arithmetic: days remaining and quantity updates.
+- Selection: if/elif/else decisions for dates and menu actions.
+- Loops: the menu repeats until the user exits; input loops check entries.
+- Lists and tuples: the inventory is a list; fixed food and date-label options are tuples.
+- Functions: each task is organized in a separate function.
